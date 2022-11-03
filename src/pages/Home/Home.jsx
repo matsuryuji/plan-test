@@ -54,7 +54,7 @@ const Home = () => {
 
   return(
     <>
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       <Navbar active={active} handleActiveChange={handleActiveChange} />
         <div ref={whoWeAre}><WhoWeAre/></div>
         <div className="flex flex-col sm:pl-[calc(13%+105px)] ml-[24px] sm:w-[100%] w-[350px] flex flex-col">
