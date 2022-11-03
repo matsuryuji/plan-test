@@ -1,5 +1,6 @@
 import Cases from "components/Cases";
 import Contact from "components/Contact";
+import Customer from "components/Customer";
 import Navbar from "components/Navbar";
 import WhatWeDo from "components/WhatWeDo";
 import WhoWeAre from "components/WhoWeAre";
@@ -60,6 +61,7 @@ const Home = () => {
         <div className="flex flex-col sm:pl-[calc(13%+105px)] ml-[24px] sm:w-[100%] w-[350px] flex flex-col">
           <div ref={whatWeDo}><WhatWeDo /> </div>
           <div ref={cases}><Cases/> </div>
+          <div ref={oursCustomer}><Customer/></div>
           <div ref={contact}><Contact/></div>
         </div>
       </div>
