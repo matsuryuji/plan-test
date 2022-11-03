@@ -54,7 +54,7 @@ const Navbar = ({active, handleActiveChange}) => {
         </div>
       </div>
       {/* mobile */}
-      <div className="flex flex-row justify-between px-[30px] py-[8px] fixed sm:hidden h-[auto] w-[100%] z-[100]">
+      <div className="flex flex-row justify-between px-[30px] py-[8px] fixed sm:hidden h-[auto] w-[100vmin] z-[100]">
         <img alt="" className="w-[78px] h-[38px]" src={LOGO}/>
         <div className="mt-[50px] bg-[#1E1E1E]">
           <Menu isOpen={menuOpen}

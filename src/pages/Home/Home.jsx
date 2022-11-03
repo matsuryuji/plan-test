@@ -2,10 +2,11 @@ import Cases from "components/Cases";
 import Contact from "components/Contact";
 import Navbar from "components/Navbar";
 import WhatWeDo from "components/WhatWeDo";
+import WhoWeAre from "components/WhoWeAre";
 import React, { useEffect, useState, useRef } from "react";
 
 const Home = () => {
-  const [active, setActive] = useState('whatWeDo');
+  const [active, setActive] = useState('whoWeAre');
 
   const whoWeAre = useRef(null);
   const whatWeDo = useRef(null);
@@ -36,7 +37,7 @@ const Home = () => {
         scrollToSection(contact)
         break;
       default:
-        setActive('whatWeDo');
+        setActive('whoWeAre');
     }
   }
   useEffect(() => {
@@ -55,16 +56,12 @@ const Home = () => {
     <>
     <div className="flex flex-col">
       <Navbar active={active} handleActiveChange={handleActiveChange} />
-      <div className="flex flex-col sm:ml-[calc(13%+105px)] ml-[24px] w-[350px] flex flex-col">
-        <div ref={whatWeDo}><WhatWeDo /> </div>
-        <div ref={cases}><Cases/> </div>
-        <div ref={contact}><Contact/></div>
-      </div>
-      {/* <div className="sm:hidden ml-[24px] w-[350px] flex flex-col">
-        <div><WhatWeDo /> </div>
-        <div><Cases/> </div>
-        <div><Contact/></div>
-      </div> */}
+        <div ref={whoWeAre}><WhoWeAre/></div>
+        <div className="flex flex-col sm:pl-[calc(13%+105px)] ml-[24px] sm:w-[100%] w-[350px] flex flex-col">
+          <div ref={whatWeDo}><WhatWeDo /> </div>
+          <div ref={cases}><Cases/> </div>
+          <div ref={contact}><Contact/></div>
+        </div>
       </div>
     </>
     
